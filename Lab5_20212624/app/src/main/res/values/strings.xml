@@ -1,3 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Lab5_20212624</string>
+
+
+    <string name="saludo_default">¡Hola, Estudiante!</string>
+    <string name="mensaje_motivacional_default">Hoy es un gran día para aprender</string>
+    <string name="btn_ver_cursos">Ver mis cursos</string>
+    <string name="btn_configuraciones">Configuraciones</string>
+    <string name="hint_cambiar_imagen">Toca tu imagen para cambiarla</string>
+
+
+    <string name="titulo_configuraciones">Configuraciones</string>
+    <string name="seccion_info_personal">Información Personal</string>
+    <string name="seccion_mensaje_motivacional">Mensaje Motivacional</string>
+    <string name="seccion_notificaciones">Frecuencia de Mensajes Motivacionales</string>
+    <string name="hint_nombre">Tu nombre</string>
+    <string name="hint_mensaje_motivacional">Tu mensaje motivacional</string>
+    <string name="descripcion_frecuencia">Configura cada cuántas horas quieres recibir tu mensaje motivacional</string>
+    <string name="btn_guardar">Guardar</string>
+    <string name="btn_volver">Volver</string>
+    <string name="cada_hora">Cada hora</string>
+    <string name="cada_x_horas">Cada %d horas</string>
+
+
+    <string name="error_nombre_vacio">El nombre no puede estar vacío</string>
+    <string name="error_mensaje_vacio">El mensaje no puede estar vacío</string>
+    <string name="error_cargar_imagen">Error al cargar la imagen</string>
+    <string name="error_permiso_galeria">Permiso denegado para acceder a la galería</string>
+
+    <string name="exito_configuracion_guardada">Configuración guardada exitosamente</string>
+    <string name="exito_imagen_guardada">Imagen guardada exitosamente</string>
+    <string name="permisos_notificacion_concedidos">Permisos de notificación concedidos</string>
+    <string name="notificaciones_deshabilitadas">Las notificaciones están deshabilitadas</string>
+
+
+
+    <string name="channel_teoricos_name">Cursos Teóricos</string>
+    <string name="channel_teoricos_desc">Notificaciones para cursos teóricos</string>
+    <string name="channel_laboratorios_name">Laboratorios</string>
+    <string name="channel_laboratorios_desc">Notificaciones para laboratorios</string>
+    <string name="channel_electivos_name">Cursos Electivos</string>
+    <string name="channel_electivos_desc">Notificaciones para cursos electivos</string>
+    <string name="channel_otros_name">Otros Cursos</string>
+    <string name="channel_otros_desc">Notificaciones para otros tipos de cursos</string>
+    <string name="channel_motivacional_name">Mensajes Motivacionales</string>
+    <string name="channel_motivacional_desc">Mensajes motivacionales configurables</string>
+
+
+    <string name="desc_imagen_perfil">Imagen de perfil - Presiona para cambiar</string>
+
 </resources>

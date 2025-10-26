@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_curso"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@android:color/white">
+
+        <!-- Header con nombre y botón eliminar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <!-- Nombre del curso -->
+            <TextView
+                android:id="@+id/tv_nombre_curso"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Nombre del Curso"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text"
+                android:maxLines="2"
+                android:ellipsize="end" />
+
+            <!-- Botón eliminar -->
+            <ImageButton
+                android:id="@+id/btn_eliminar"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_delete"
+                android:contentDescription="Eliminar curso"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginStart="8dp" />
+
+        </LinearLayout>
+
+        <!-- Categoría -->
+        <TextView
+            android:id="@+id/tv_categoria_curso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📚 Teórico"
+            android:textSize="14sp"
+            android:textColor="@color/secondary_text"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Frecuencia de estudio -->
+        <TextView
+            android:id="@+id/tv_frecuencia_curso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔄 Cada 2 días"
+            android:textSize="14sp"
+            android:textColor="@color/secondary_text"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Próxima sesión -->
+        <TextView
+            android:id="@+id/tv_proxima_sesion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📅 25/10/2025 a las 14:30"
+            android:textSize="14sp"
+            android:textColor="@color/primary_text"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Separador -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color"
+            android:layout_marginVertical="8dp" />
+
+        <!-- Acción sugerida -->
+        <TextView
+            android:id="@+id/tv_accion_sugerida"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💡 Revisar apuntes del tema anterior"
+            android:textSize="13sp"
+            android:textColor="@color/secondary_text"
+            android:textStyle="italic"
+            android:background="@color/primary_light"
+            android:padding="8dp"
+            android:layout_marginTop="4dp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

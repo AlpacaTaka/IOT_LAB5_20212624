@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_light">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary_color"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <!-- Contenido en ScrollView -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Título -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📚 Crear Nuevo Curso"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text"
+                android:gravity="center"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Información básica del curso -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="📖 Información del Curso"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary_color"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Nombre del curso -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        style="@style/TextInputLayoutCustom">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_nombre_curso"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Nombre del curso *"
+                            android:inputType="textCapWords"
+                            android:maxLines="1" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Categoría del curso CORREGIDO -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/act_categoria_curso"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Categoría del curso *"
+                            android:inputType="none"
+                            android:focusable="false" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Acción sugerida -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextInputLayoutCustom">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_accion_sugerida"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Acción sugerida (ej: Revisar apuntes)"
+                            android:inputType="textMultiLine"
+                            android:maxLines="3" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Frecuencia de estudio -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🔄 Frecuencia de Estudio"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary_color"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Frecuencia en horas -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cada"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"
+                            android:layout_marginEnd="8dp" />
+
+                        <NumberPicker
+                            android:id="@+id/np_frecuencia_horas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="80dp"
+                            android:layout_marginHorizontal="8dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="horas"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"
+                            android:layout_marginStart="8dp" />
+
+                    </LinearLayout>
+
+                    <!-- Frecuencia en días -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="o cada"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"
+                            android:layout_marginEnd="8dp" />
+
+                        <NumberPicker
+                            android:id="@+id/np_frecuencia_dias"
+                            android:layout_width="wrap_content"
+                            android:layout_height="80dp"
+                            android:layout_marginHorizontal="8dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="días"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"
+                            android:layout_marginStart="8dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Próxima sesión -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="📅 Próxima Sesión"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary_color"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Seleccionar fecha CORREGIDO -->
+                    <Button
+                        android:id="@+id/btn_seleccionar_fecha"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="📅 Seleccionar Fecha"
+                        android:textSize="16sp"
+                        style="@style/ButtonSecondary"
+                        android:elevation="2dp" />
+
+                    <TextView
+                        android:id="@+id/tv_fecha_seleccionada"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fecha no seleccionada"
+                        android:textSize="14sp"
+                        android:textColor="@color/secondary_text"
+                        android:gravity="center"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Seleccionar hora CORREGIDO -->
+                    <Button
+                        android:id="@+id/btn_seleccionar_hora"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="🕐 Seleccionar Hora"
+                        android:textSize="16sp"
+                        style="@style/ButtonSecondary"
+                        android:elevation="2dp" />
+
+                    <TextView
+                        android:id="@+id/tv_hora_seleccionada"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hora no seleccionada"
+                        android:textSize="14sp"
+                        android:textColor="@color/secondary_text"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Botones de acción CORREGIDOS -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="8dp">
+
+                <!-- Botón Cancelar -->
+                <Button
+                    android:id="@+id/btn_cancelar"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:text="Cancelar"
+                    android:textSize="16sp"
+                    style="@style/ButtonSecondary"
+                    android:elevation="2dp" />
+
+                <!-- Botón Guardar -->
+                <Button
+                    android:id="@+id/btn_guardar_curso"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:text="Guardar"
+                    android:textSize="16sp"
+                    style="@style/ButtonPrimary"
+                    android:elevation="4dp" />
+
+            </LinearLayout>
+
+            <!-- Nota informativa -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="* Campos obligatorios\n💡 Configura la frecuencia para recibir recordatorios automáticos"
+                android:textSize="12sp"
+                android:textColor="@color/hint_text"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:padding="8dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

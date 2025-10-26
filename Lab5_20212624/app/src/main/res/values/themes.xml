@@ -1,9 +1,88 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.Lab5_20212624" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.Theme.Lab5_20212624" parent="Theme.Material3.DayNight">
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorSecondary">@color/secondary_color</item>
+        <item name="colorSecondaryVariant">@color/secondary_dark</item>
+        <item name="colorOnSecondary">@android:color/black</item>
+        <item name="android:colorBackground">@color/background_light</item>
+        <item name="colorOnBackground">@color/primary_text</item>
+        <item name="colorSurface">@color/background_white</item>
+        <item name="colorOnSurface">@color/primary_text</item>
     </style>
 
-    <style name="Theme.Lab5_20212624" parent="Base.Theme.Lab5_20212624" />
+
+    <style name="Theme.GestorEstudioAcademico" parent="Base.Theme.Lab5_20212624" />
+
+
+    <style name="Theme.GestorEstudioAcademico.NoActionBar" parent="Theme.GestorEstudioAcademico">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/primary_color</item>
+        <item name="android:navigationBarColor">@color/primary_color</item>
+    </style>
+
+
+    <style name="ButtonPrimary" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/primary_color</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="rippleColor">@color/primary_light</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+    <style name="ButtonSecondary" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="strokeColor">@color/primary_color</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="android:textColor">@color/primary_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="backgroundTint">@color/background_white</item>
+        <item name="rippleColor">@color/primary_light</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+    <style name="CardViewCustom" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">12dp</item>
+        <item name="cardElevation">4dp</item>
+        <item name="cardBackgroundColor">@color/background_white</item>
+    </style>
+
+
+    <style name="TextInputLayoutCustom" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/primary_color</item>
+        <item name="hintTextColor">@color/primary_color</item>
+        <item name="android:textColorHint">@color/hint_text</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+    </style>
+
+
+    <style name="ButtonText" parent="Widget.Material3.Button.TextButton">
+        <item name="android:textColor">@color/primary_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="rippleColor">@color/primary_light</item>
+    </style>
+
+
+    <style name="FABCustom" parent="Widget.Material3.FloatingActionButton.Primary">
+        <item name="backgroundTint">@color/primary_color</item>
+        <item name="tint">@android:color/white</item>
+        <item name="android:layout_margin">16dp</item>
+    </style>
+
 </resources>

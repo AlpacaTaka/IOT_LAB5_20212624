@@ -1,19 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/background_light">
 
+    <!-- Header con saludo -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:padding="20dp">
+
+        <!-- Imagen de perfil -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="150dp"
+            app:cardElevation="8dp">
+
+            <ImageView
+                android:id="@+id/iv_profile_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_default_profile"
+                android:contentDescription="Imagen de perfil - Presiona para cambiar" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Saludo dinámico -->
+        <TextView
+            android:id="@+id/tv_saludo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¡Hola, Estudiante!"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_text"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Mensaje motivacional -->
+        <TextView
+            android:id="@+id/tv_mensaje_motivacional"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hoy es un gran día para aprender"
+            android:textSize="16sp"
+            android:textColor="@color/secondary_text"
+            android:gravity="center"
+            android:layout_marginHorizontal="16dp" />
+
+    </LinearLayout>
+
+    <!-- Espacio flexible -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Botones principales -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="32dp"
+        android:paddingHorizontal="16dp">
+
+        <!-- Botón Ver mis cursos -->
+        <Button
+            android:id="@+id/btn_ver_cursos"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="16dp"
+            android:text="Ver mis cursos"
+            android:textSize="18sp"
+            style="@style/ButtonPrimary"
+            android:drawablePadding="8dp"
+            android:elevation="4dp" />
+
+        <!-- Botón Configuraciones -->
+        <Button
+            android:id="@+id/btn_configuraciones"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Configuraciones"
+            android:textSize="18sp"
+            style="@style/ButtonSecondary"
+            android:drawablePadding="8dp"
+            android:elevation="2dp" />
+
+    </LinearLayout>
+
+    <!-- Footer con información adicional -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Toca tu imagen para cambiarla"
+        android:textSize="12sp"
+        android:textColor="@color/hint_text"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
